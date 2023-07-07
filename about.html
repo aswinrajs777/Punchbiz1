@@ -1,0 +1,1167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About PunchBiz</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+   
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="css/about.css">
+   
+
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+     <style>
+        
+body {
+    width: 100%;
+    background-color: white;
+  }
+
+*{
+  font-family: 'Jost', sans-serif;
+}
+/* txt */
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #37517e;
+}
+
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #1e1d1d;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #000000;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+/* txt */
+/* NAVBAR */
+#header {
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 15px 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: rgb(255, 255, 255);
+}
+
+#header.header-scrolled,
+#header.header-inner-pages {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+#header .logo {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#header .logo a {
+  color: #fff;
+}
+
+#header .logo img {
+
+  border-radius: 20px;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation
+*/
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-size: 15px;
+  font-weight: 500;
+  color: hsl(0, 0%, 0%);
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+ .navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: rgb(14, 41, 84);
+}
+
+.navbar .getstarted,
+.navbar .getstarted:focus {
+  padding: 8px 20px;
+  margin-left: 30px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 14px;
+  border: 2px solid #47b2e4;
+  font-weight: 600;
+}
+
+/* .navbar .getstarted:hover,
+.navbar .getstarted:focus:hover {
+  color: #fff;
+  background: #31a9e1;
+} */
+
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 14px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: none;
+  font-weight: 500;
+  color: #0c3c53;
+}
+
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+
+/* .navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover>a {
+  color: #47b2e4;
+} */
+
+.navbar .dropdown:hover>ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover>ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+
+  .navbar .dropdown .dropdown:hover>ul {
+    left: -100%;
+  }
+}
+
+.nav-link-ltr {
+
+  text-decoration: none;
+
+  display: inline-block;
+  position: relative;
+  opacity: 0.75;
+}
+
+.nav-link-ltr:hover {
+  opacity: 1;
+}
+
+.nav-link-ltr::before {
+  transition: 300ms;
+  height: 3px;
+  content: "";
+  position: absolute;
+  background-color: #031D44;
+}
+
+.nav-link-ltr::before {
+  width: 0%;
+  bottom: 5px;
+}
+
+.nav-link-ltr:hover::before {
+  width: 60%;
+}
+.navbar .active::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    content: " ";
+     
+
+}
+
+/* NAVBAR */
+
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-toggle {
+  color: #000000;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+.mobile-nav-toggle.bi-x {
+  color: #010101;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+}
+
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(40, 58, 90, 0.9);
+  transition: 0.3s;
+  z-index: 999;
+ 
+}
+
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  border-radius: 10px;
+  background-color: #fff;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+
+.navbar-mobile a,
+.navbar-mobile a:focus {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #37517e;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover>a {
+  color: #47b2e4;
+}
+
+.navbar-mobile .getstarted,
+.navbar-mobile .getstarted:focus {
+  margin: 15px;
+  color: #37517e;
+}
+
+.navbar-mobile .dropdown ul {
+  position: static;
+  display: none;
+  margin: 10px 20px;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 1;
+  visibility: visible;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+
+.navbar-mobile .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar-mobile .dropdown ul a {
+  padding: 10px 20px;
+}
+
+.navbar-mobile .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar-mobile .dropdown ul a:hover,
+.navbar-mobile .dropdown ul .active:hover,
+.navbar-mobile .dropdown ul li:hover>a {
+  color: #47b2e4;
+}
+
+.navbar-mobile .dropdown>.dropdown-active {
+  display: block;
+}
+
+
+
+  /* ABOUT COMPANY */
+ 
+  #sec2{
+    padding: 2%;
+    background-color: #c8e6f3;
+    background-image: url("https://img.freepik.com/free-photo/white-particle-lines-futuristic-gradient-background_53876-102621.jpg?w=740&t=st=1688475045~exp=1688475645~hmac=7c52bb85152ab1a394bb6a260f7c90df5232c58608b25d71b2d8eb51c4555eaf");
+    background-repeat: no-repeat;
+    background-size: cover  ;
+ }
+
+  .box-background {
+    box-shadow: 5px 10px #afaeae;
+    margin: 100px auto 0 auto;
+    background: white no-repeat;
+    background-size: cover;
+    height: 35rem;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    padding-right: 2%;
+    padding-bottom: 2%;
+    z-index: 2;
+    overflow-y: auto;
+    margin-bottom: 9%;
+    font-size: 16px;
+
+  }
+
+  .box-background::-webkit-scrollbar {
+    display: none;
+  }
+
+ .box-right{
+    text-align: justify;
+    margin-left: 0;
+ }
+
+ .box-left{
+  align-content: right;
+  overflow: hidden;
+  text-align: justify;
+}
+
+.girl-gif{
+    height: 68%;
+    width: 73%;
+    margin-left: 6%;
+ }
+
+.title-txt{
+  padding: auto;
+  font-size: 35px;
+  font-weight:bolder;
+  text-align: center;
+  color: #37517e;
+ }
+
+
+  /* ABOUT COMPANY */
+
+  /* Milestones */
+
+ #sec3{
+  background-color: white ;
+  padding: 7%;
+ }
+
+.title-mile{
+  color: #37517e;
+  padding: auto;
+  font-size: 35px;
+  font-weight:bolder;
+  text-align: center;
+}
+
+
+.miles{
+  border-radius: 20px;
+     padding-top: 5%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#roadmap{
+   height: 60%;
+   border-radius: 20px;
+}
+
+  /* Milestones */
+
+
+  /* PROFILE */
+
+  .title-t{
+    color: #37517e ;
+    padding: auto;
+    font-size: 35px;
+    font-weight:bolder;
+    text-align: center;
+  }
+
+
+  #sec4{
+    /* background-color: gainsboro; */
+    /* background-image: url('https://thumbs.gfycat.com/AdorableIllegalGraysquirrel-size_restricted.gif'); */
+    background-image: url("https://thumbs.gfycat.com/SparseAnnualBovine-size_restricted.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 2%;
+  }
+ 
+  .top1{
+    padding-left: 10%;
+     padding-right: 13%;
+  }
+
+ 
+ 
+  .card{
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    overflow: hidden;
+    border-radius: 15px;
+    margin-top: 25%;
+    padding: 5%;
+    margin-left: 2%;
+    box-sizing: border-box;
+
+  }
+
+  .card:hover {
+    transform: translate(0, -15px);
+    }
+
+  .img1 h1{
+    padding: 1px;
+    text-align: center;
+    height: 155px;
+    font-weight: bold;
+    border-radius: 35px;
+    width: 100%;
+    text-transform: uppercase;
+    font-size:28px;
+    color: black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin-top: 2%;
+    padding-top: 20px;
+  }
+
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .slide-left{
+    transition: 0.5s;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-name: slideInLeft;
+   
+  }
+
+  .slide-right{
+    transition: 0.5s;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-name: slideInRight;
+  }
+
+  .slide-left2{
+    animation-duration: 2s;
+  }
+  .slide-right2{
+    animation-duration: 2s;
+  }
+
+  .mem1{
+    background-color: #FAE7FA;
+  }
+
+  .mem2{
+    background-color: #C2C9E7;
+  }
+
+  .mem3{
+    background-color: #8BC0D5;
+  }
+  .mem4{
+    background-color: #f1c6a2;
+  }
+
+  .mem5{
+    background-color: #e7faef;
+
+  }
+
+  .mem6{
+    background-color: #bea0d3;
+  }
+  .img2 img{
+    position: relative;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+   z-index: 1;
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   border: 7px solid #fff;
+   margin-top: -80px;
+   margin-bottom: 0;
+
+  }
+
+  .card:hover img2 img{
+    border-color: darkcyan;
+    transition: .7s;
+  }
+
+  .main-text{
+    padding: 30px 0;
+    text-align: center;
+  }
+
+  .main-text p{
+    font-size: 20px;
+    padding-top:30px;
+    text-transform: uppercase;
+   
+  }
+
+  .socials{
+    text-align: center;
+    padding-bottom: 20px;
+
+  }
+  .socials i{
+    font-size: 24px;
+    color: #2F667F;
+    padding: 10px;
+  }
+
+  .socials i:hover {
+    transform: translate(0, -5px);
+    color: black;
+    }
+
+  @keyframes slideInDown {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .reveal{
+    transition: 0.5s;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-name: slideInDown;
+  }
+
+ 
+  .reveal2{
+    transition: 0.5s;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-name: slideInDown;
+  }
+ 
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 36px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+ 
+}
+
+.card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  color: black;
+}
+
+.flip-card-back {
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* FOOTER */
+.footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 80px;
+  padding: 20px 50px;
+  display: flex;
+  margin-top: 9%;
+ 
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+.menu1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  flex-wrap: wrap;
+ 
+}
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+.add1{
+   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  flex-wrap: wrap;
+  color: #ffffff;
+}
+.add2{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #ffffff;
+     margin: 0 10px;
+  }
+footer p{
+    text-align: center;
+}
+/* FOOTER */
+     </style>
+     
+</head>
+<body>
+      <!-- Header -->
+        <section>
+          <header id="header" class="fixed-top ">
+            <div class="container d-flex align-items-center">
+              <h1 class="logo me-auto"><a href="index.html"><img alt="no" src="picture/Logo_Punchbiz.jpg" ></a></h1>
+              <nav id="navbar" class="navbar">
+                <ul>
+                  <li><a class="nav-link scrollto nav-link-ltr" href="index.html">Home</a></li>
+                  <li><a class="nav-link scrollto nav-link-ltr active" href="about.html">About</a></li>
+                  <li><a class="nav-link scrollto nav-link-ltr" href="product.html">Product</a></li>
+                  <li><a class="nav-link   scrollto nav-link-ltr" href="client.html">Client</a></li>
+                  <li><a class="nav-link scrollto nav-link-ltr" href="contact.html">Contact</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+              </nav>  
+            </div>
+          </header>
+
+   
+           
+        </section>
+      <!-- Header -->
+
+      <!-- About Company -->
+     <section id="sec2" class="sec container-fluid">
+      <div class="box-background container row">
+        <div class="box-left container col-md-6 slide-left">
+          <img src="images/Girl-abt.gif" alt="no image" class="girl-gif" ></img>
+        </div>
+        <div class="box-right col-md-6 container slide-right">
+          <p>
+            <span class="title-txt"> Know About Us</span><br><br>
+             Our company provides AI vision analytics solutions that empower businesses to make informed decisions and drive growth. We leverage the latest advancements in AI technology to provide businesses with the tools and insights they need to analyze and utilize their data.
+            <br><br>
+            Our solutions are designed to integrate seamlessly into a variety of business operations and decision-making processes, delivering intelligence and insights to drive efficiency, accuracy, and success. Our team of experts works closely with clients to understand their unique needs and deliver customized solutions that meet their specific requirements. We are committed to continuously innovating and improving our technology, ensuring that we remain at the forefront of the industry and deliver the most advanced AI vision analytics solutions to our clients.  
+        </p>
+        </div>
+      </div>
+    </section>
+     <!-- About Company -->
+
+
+
+<!--MileStones-->
+<section id="sec3" class="sec ">  
+   <div class="section-title">
+          <h2>MILESTONES</h2>
+      </div>   <br>
+       <div class="row reveal">
+          <img src="images/time.png" alt="no" class="miles" id="roadmap">
+       </div>
+</section>
+<!--MileStones-->
+
+      <!-- Team -->
+ <div class="section-title">
+          <h2>ELITE TEAM</h2>
+      </div>
+    <section id="sec4" class="sec container-fluid">
+        <br>
+ 
+          <div class="profile-area">
+            <div class="container-fluid ">
+
+              <div class="row">
+
+               <div class="col-md-6 slide-left top1">
+                <div class="card top">        
+                  <div class="img1"><h1 class="main-txt mem1">Sriram</h1></div>  
+                 
+                  <div class="flip-card">
+                    <div class="flip-card-inner">
+                     
+                  <div class="img2 flip-card-front"><img src="images/team1.jpg" alt=""></div>
+                  <div class="img2 flip-card-back"><img src="images/team1.jpg" alt=""></div>
+                  </div>
+                  </div>
+                  <div class="main-text">
+                   
+                     <p>Founder / CEO</p>
+                  </div>
+                  <div class="socials">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-linkedin"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram "></i>
+                  </div>
+                </div>
+               </div>
+
+               
+               <div class="col-md-6 top1 slide-right">
+                <div class="card top">        
+                  <div class="img1"><h1 class="main-txt mem2">Vignesh</h1></div>
+                  <div class="flip-card">
+                    <div class="flip-card-inner">
+                         
+                  <div class="img2 flip-card-front"><img src="images/team2.jfif" alt=""></div>
+                  <div class="img2 flip-card-back"><img src="images/team2.jfif" alt=""></div>
+
+              </div>
+              </div>
+                  <div class="main-text">
+                   
+                     <p>Co-Founder / CTO</p>
+                 </div>
+                  <div class="socials">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-linkedin"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram "></i>
+                  </div>
+                </div>
+               </div>
+
+
+               <div class="row">
+                <div class="col-md-3 slide-left slide-left2">
+                  <div class="card">        
+                    <div class="img1"><h1 class="main-txt mem3">Gururaj</h1></div>        
+                    <div class="flip-card">
+                      <div class="flip-card-inner">
+                       
+                    <div class="img2 flip-card-front"><img src="images/team1.jpg" alt=""></div>
+                    <div class="img2 flip-card-back"><img src="images/team1.jpg" alt=""></div>
+                    </div>
+                    </div>
+                     <div class="main-text">
+                     
+                       <p>Test Lead</p>
+                    </div>
+                    <div class="socials">
+                      <i class="fa fa-facebook"></i>
+                      <i class="fa fa-linkedin"></i>
+                      <i class="fa fa-twitter"></i>
+                      <i class="fa fa-instagram "></i>
+                     </div>
+                  </div>
+                 </div>
+
+                <div class="col-md-3 reveal2">
+                 
+                 <div class="card">        
+                   <div class="img1"><h1 class="main-txt mem4">Gowtham</h1></div>        
+                   <div class="flip-card">
+                    <div class="flip-card-inner">
+                     
+                  <div class="img2 flip-card-front"><img src="images/team2.jfif" alt=""></div>
+                  <div class="img2 flip-card-back"><img src="images/team2.jfif" alt=""></div>
+                  </div>
+                  </div>
+                   <div class="main-text">
+                   
+                      <p>Front End Lead</p>
+                  </div>
+                  <div class="socials">
+                     <i class="fa fa-facebook"></i>
+                     <i class="fa fa-linkedin"></i>
+                     <i class="fa fa-twitter"></i>
+                     <i class="fa fa-instagram "></i>
+                  </div>
+                 </div>
+                </div>
+ 
+                <div class="col-md-3 reveal2">
+                 <div class="card">        
+                   <div class="img1"><h1 class="main-txt mem5">Manoj Sasidharan</h1></div>        
+                   <div class="flip-card">
+                    <div class="flip-card-inner">
+                     
+                  <div class="img2 flip-card-front"><img src="images/team1.jpg" alt=""></div>
+                  <div class="img2 flip-card-back"><img src="images/team1.jpg" alt=""></div>
+                  </div>
+                  </div>
+                   <div class="main-text pb-1">
+                   
+                      <p>International Relationship Manager</p>
+                  </div>
+                   <div class="socials">
+                     <i class="fa fa-facebook"></i>
+                     <i class="fa fa-linkedin"></i>
+                     <i class="fa fa-twitter"></i>
+                     <i class="fa fa-instagram "></i>
+                   </div>
+                 </div>
+                </div>
+
+                <div class="col-md-3 slide-right slide-right2">
+                 <div class="card">        
+                   <div class="img1"><h1 class="main-txt mem6">Sanjai Sakthivel</h1></div>        
+                   <div class="flip-card">
+                    <div class="flip-card-inner">
+                     
+                  <div class="img2 flip-card-front"><img src="images/team2.jfif" alt=""></div>
+                  <div class="img2 flip-card-back"><img src="images/team2.jfif" alt=""></div>
+                  </div>
+                  </div>
+                    <div class="main-text">
+                   
+                      <p>Front End Developer</p>
+                   </div>
+                   <div class="socials">
+                     <i class="fa fa-facebook"></i>
+                     <i class="fa fa-linkedin"></i>
+                     <i class="fa fa-twitter"></i>
+                     <i class="fa fa-instagram"></i>
+                   </div>
+                 </div>
+                </div>
+              </div>
+           </div>
+          </div>
+         </section>
+               <!-- Team -->
+<br>
+               <!--Contact-->
+ <section id="sec" class="sec container-fluid">
+<br>
+</section>
+                <!--Contact-->
+
+      <!--Footer-->
+     
+ 
+<footer class="footer">
+    <div class="waves" style="margin: 10px 0;">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <div class="add1"><i class='fa fa-map-marker-alt'></i>&nbsp;&nbsp;<h3>Registered Office</h3></div>
+          <div class="add1">89/2/36, Vasagasalai Street, </div>
+          <div class="add1">Ponnamapet,</div>
+          <div class="add1">Salem, Tamil Nadu, India - 636001</div>
+        </div>
+       
+        <div class="col-sm">
+          <div class="add1"><i class='fa fa-map-marker-alt'></i>&nbsp;&nbsp;<h3>Branch Office</h3></div>
+            <div class="add1">Room 2,3 rd floor, </div>
+            <div class="add1">Plot No 8 MS Complex Sastri</div>
+            <div class="add1">Nagar Kolathur,Chennai-600099</div>
+        </div>
+      </div>
+    </div>
+   
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+    <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="about.html">About</a></li>
+      <li class="menu__item"><a class="menu__link" href="product.html">Product</a></li>
+      <li class="menu__item"><a class="menu__link" href="client.html">Client</a></li>
+      <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
+ 
+    </ul>
+    <p>&copy;2023 Punchbiz | All Rights Reserved</p>
+  </footer>
+
+      <!--Footer-->
+     
+         <script src="assets/js/main.js"></script>
+
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+</body>
+</html>

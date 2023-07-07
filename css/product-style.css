@@ -1,0 +1,307 @@
+/* background */
+body {
+  /* background-image: url("https://media0.giphy.com/media/3ohhwzIw3bISRhQWME/giphy.gif?cid=6c09b952wrtypp7fj2otd49r99nruliz7gocgj7cgemvfroh&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s");
+   height: 100%; /* Full height */
+   /* background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover; */
+  
+ }
+
+ /* background ends */
+
+ /* product icons */
+
+  .card{
+   /* background-image: url("https://images.saymedia-content.com/.image/t_share/MTkzOTUzODU0MDkyODc5MzY1/particlesjs-examples.gif"); */
+   background-image: url("https://uploads-ssl.webflow.com/62f68179992cf45a64c2403e/63cc647fd7632ebc2242cb50_Particles%20demo%202.gif");
+   height: 100%; /* Full height */
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+  }
+ .circular-image {
+   width: 150px;
+   height: 150px;
+   border:1px solid black;
+   border-radius: 50%;
+   overflow: hidden;
+   margin: 0 auto;
+ }
+ 
+ .circular-image img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+ }
+
+ .circular-image:hover{
+   transform: scale(1.1);
+ }
+
+ .icon-heading{
+   color: azure;
+   font-family: 'Chakra Petch', sans-serif;
+   text-shadow: 3px 3px 3px #ababab;
+ }
+
+ .icon-name{
+   text-align: center;
+   padding-top: 10px;
+   font-size: 20px;
+   color: rgb(7, 57, 102);
+   font-family: 'Chakra Petch', sans-serif;
+   /*text-shadow: 3px 3px 3px #686666;*/
+ }
+
+  /* #product-icons{
+  background-color: #ababab;
+ }  */
+ /* product icon ends */
+
+ /* reveal */
+
+ .reveal{
+   position: relative;
+   transform: translateY(150px);
+   opacity: 0;
+   transition: 1s all ease;
+ }
+
+ .reveal.active{
+   transform: translateY(0);
+   opacity: 1;
+ }
+ /* reveal ends */
+
+ /* description */
+
+ .para{
+     text-indent: 50px;
+     text-align: justify;
+     padding: 10px;
+     font-family: 'Chakra Petch', sans-serif;
+     color: rgb(8, 8, 47);
+   }
+   .para-h6{
+    font-family: 'Chakra Petch', sans-serif;
+     color: rgb(8, 8, 47);
+
+   }
+   .txt{
+     text-align: center;
+     margin-left: 500px;
+     
+   }
+   
+   .bg{
+     /*background-color: rgb(147, 129, 111);*/
+   background-image: url("https://i.gifer.com/ByRk.gif");
+   height: 100%; /* Full height */
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   }
+
+   .bg1{
+     background-image: url("https://64.media.tumblr.com/7eeaced6eb498e8f038731bedd5c62a4/tumblr_oj92i4f9mI1uzwgsuo1_400.gif");
+   height: 100%; /* Full height */
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+
+     /*background-color: rgb(192, 185, 178);*/
+   }
+
+   .des-heading{
+   color: rgb(78, 75, 0);
+   font-family: 'Chakra Petch', sans-serif;
+   text-shadow: 3px 3px 3px #6b6565;
+ }
+
+ .sub-heading{
+  color: rgb(83, 81, 7);
+   font-family: 'Chakra Petch', sans-serif;
+   text-shadow: 3px 3px 3px #928d8d;
+ }
+ 
+ .imag:hover {
+ animation: shake 0.5s;
+ animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+ 0% { transform: translate(1px, 1px) rotate(0deg); }
+ 10% { transform: translate(-1px, -2px) rotate(-1deg); }
+ 20% { transform: translate(-3px, 0px) rotate(1deg); }
+ 30% { transform: translate(3px, 2px) rotate(0deg); }
+ 40% { transform: translate(1px, -1px) rotate(1deg); }
+ 50% { transform: translate(-1px, 2px) rotate(-1deg); }
+ 60% { transform: translate(-3px, 1px) rotate(0deg); }
+ 70% { transform: translate(3px, 1px) rotate(-1deg); }
+ 80% { transform: translate(-1px, -1px) rotate(1deg); }
+ 90% { transform: translate(1px, 2px) rotate(0deg); }
+ 100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+   /* description end */
+
+   /* br */
+   .line-break {
+     display: block;
+     content: "";
+     margin-bottom: 10px; /* Set margin-bottom to create the line break effect */
+   }
+
+   .break{
+    display: block;
+     content: "";
+     margin-bottom: 150px;
+   }
+
+   
+
+   /*footer*/
+   .footer {
+position: relative;
+width: 100%;
+background: #3586ff;
+min-height: 80px;
+padding: 20px 50px;
+display: flex;
+margin-top: 19%;
+
+flex-direction: column;
+}
+
+.social-icon,
+.menu {
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 10px 0;
+flex-wrap: wrap;
+}
+.menu1 {
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+
+flex-wrap: wrap;
+
+}
+.social-icon__item,
+.menu__item {
+list-style: none;
+}
+
+.social-icon__link {
+font-size: 2rem;
+color: #fff;
+margin: 0 10px;
+display: inline-block;
+transition: 0.5s;
+}
+.social-icon__link:hover {
+transform: translateY(-10px);
+}
+
+.menu__link {
+font-size: 1.2rem;
+color: #fff;
+margin: 0 10px;
+display: inline-block;
+transition: 0.5s;
+text-decoration: none;
+opacity: 0.75;
+font-weight: 300;
+}
+
+.menu__link:hover {
+opacity: 1;
+}
+
+.footer p {
+color: #fff;
+margin: 15px 0 10px 0;
+font-size: 1rem;
+font-weight: 300;
+}
+
+.wave {
+position: absolute;
+top: -100px;
+left: 0;
+width: 100%;
+height: 100px;
+background: url("https://i.ibb.co/wQZVxxk/wave.png");
+background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+z-index: 1000;
+opacity: 1;
+bottom: 0;
+animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+z-index: 999;
+opacity: 0.5;
+bottom: 10px;
+animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+z-index: 1000;
+opacity: 0.2;
+bottom: 15px;
+animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+z-index: 999;
+opacity: 0.7;
+bottom: 20px;
+animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+0% {
+  background-position-x: 1000px;
+}
+100% {
+  background-positon-x: 0px;
+}
+}
+
+@keyframes animate {
+0% {
+  background-position-x: -1000px;
+}
+100% {
+  background-positon-x: 0px;
+}
+}
+.add1{
+  
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0 200px;
+flex-wrap: wrap;
+color: #ffffff;
+}
+.add2{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #ffffff;
+   margin: 0 10px;
+}
+footer p{
+  text-align: center;
+}

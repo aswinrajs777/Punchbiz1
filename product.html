@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+  
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  
+    <!--Google Font-->
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,600;0,700;1,300&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!--Icon link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />  
+    <!-- reveal -->
+    <script>
+      function reveal1() {
+    var reveals = document.querySelectorAll(".reveal");
+  
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[0].getBoundingClientRect().top;
+      var elementVisible = 0;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[0].classList.add("active");
+      } else {
+        reveals[0].classList.remove("active");
+      }
+  }
+  
+      function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+  
+    for (var i = 1; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 0;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+  window.addEventListener("load", reveal1);
+  window.addEventListener("scroll", reveal);
+     </script>
+     <style>
+
+           /* .card{ 
+    background-image: url("https://images.saymedia-content.com/.image/t_share/MTkzOTUzODU0MDkyODc5MzY1/particlesjs-examples.gif"); 
+    background-image: url("https://uploads-ssl.webflow.com/62f68179992cf45a64c2403e/63cc647fd7632ebc2242cb50_Particles%20demo%202.gif");
+   height: 100%; 
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover; 
+   background: rgb(2,0,36);
+   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.5019257703081232) 0%, rgba(0,212,255,1) 100%); 
+   } */
+
+ .circular-image {
+   width: 150px;
+   height: 150px;
+   border:1px solid black;
+   border-radius: 50%;
+   overflow: hidden;
+   margin: 0 auto;
+ }
+ 
+ .circular-image img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+ }
+
+ .circular-image:hover{
+   transform: scale(1.1);
+ }
+
+ .icon-heading{
+   color: rgb(10, 22, 81);
+   font-family: "Jost", sans-serif;
+   /* text-shadow: 3px 3px 3px #ababab; */
+ }
+
+ .icon-name{
+   text-align: center;
+   padding-top: 10px;
+   font-size: 20px;
+   color: rgb(10, 22, 81);
+   font-family: "Jost", sans-serif;
+   /*text-shadow: 3px 3px 3px #686666;*/
+ }
+
+      .img-left{
+        background-color:#8686872c;
+      }
+      .img-right{
+        background-color: #ffffff;
+      }
+
+      /* .container{
+        box-shadow: 5px 10px #afaeae;
+        border-radius: 10px;
+      } */
+
+      .box{
+        padding-top: 2%;
+        padding-bottom: 2%;
+      }
+       /* reveal */
+
+       .reveal{
+   position: relative;
+   transform: translateY(150px);
+   opacity: 0;
+   transition: 1s all ease;
+ }
+
+ .reveal.active{
+   transform: translateY(0);
+   opacity: 1;
+ }
+ /* reveal ends */
+
+ 
+   /* br */
+   .line-break {
+     display: block;
+     content: "";
+     margin-bottom: 10px; 
+   }
+
+   .break{
+    display: block;
+     content: "";
+     margin-bottom: 150px;
+   }
+
+   
+
+ .bg{
+     /*background-color: rgb(147, 129, 111);*/
+   background-image: url("https://i.gifer.com/ByRk.gif");
+   height: 100%; 
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   border-radius: 20px;
+   box-shadow: 5px 5px rgb(171, 169, 169);
+ }
+
+ .bg1{
+     background-image: url("https://i.gifer.com/embedded/download/ByRk.gif");
+   height: 100%; 
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   border-radius: 20px;
+   box-shadow: 5px 5px rgb(171, 169, 169);
+ }
+
+ .des-heading{
+   /* color: rgb(78, 75, 0); */
+   font-family: "Jost", sans-serif;
+
+ }
+
+ .sub-heading{
+  color: rgb(83, 81, 7);
+  font-family: "Jost", sans-serif;
+   /* text-shadow: 3px 3px 3px #928d8d; */
+ }
+ 
+ .para{
+     text-indent: 50px;
+     text-align: justify;
+     padding: 10px;
+     font-family: "Jost", sans-serif;
+     color: rgb(8, 8, 47);
+   }
+
+   .para-dataann{
+    text-align: justify;
+     padding: 10px;
+     font-family: "Jost", sans-serif;
+     color: rgb(8, 8, 47);
+   }
+
+   /* .ecourse{
+    background-color: #8686872c ;
+   } */
+
+   .ecourse-card{
+    background-color: #8686872c ;
+    border-radius: 20px;
+   box-shadow: 5px 5px rgb(171, 169, 169);
+   }
+
+   .ecourse-card:hover{
+    transform: scale(1.05);
+   }
+
+   .icon-python{
+    color: blue;
+   }
+
+   .footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 80px;
+  padding: 20px 50px;
+  display: flex;
+  margin-top: 9%;
+  
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+.menu1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  flex-wrap: wrap;
+ 
+}
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+.add1{
+    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  flex-wrap: wrap;
+  color: #ffffff;
+}
+.add2{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #ffffff;
+     margin: 0 10px;
+  }
+footer p{
+    text-align: center;
+}
+
+/* section title */
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #37517e;
+}
+
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #1e1d1d;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #000000;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 15px 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: rgb(255, 255, 255);
+  width: 100%;
+}
+
+#header.header-scrolled,
+#header.header-inner-pages {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+#header .logo {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#header .logo a {
+  color: #fff;
+}
+
+#header .logo img {
+
+  border-radius: 20px;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+  padding: 0;
+  
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-size: 15px;
+  font-weight: 500;
+  color: hsl(0, 0%, 0%);
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: rgb(58, 130, 175);
+}
+
+.navbar .getstarted,
+.navbar .getstarted:focus {
+  padding: 8px 20px;
+  margin-left: 30px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 14px;
+  border: 2px solid #47b2e4;
+  font-weight: 600;
+}
+
+/* .navbar .getstarted:hover,
+.navbar .getstarted:focus:hover {
+  color: #fff;
+  background: #31a9e1;
+} */
+
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 14px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: none;
+  font-weight: 500;
+  color: #0c3c53;
+}
+
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+
+/* .navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover>a {
+  color: #47b2e4;
+} */
+
+.navbar .dropdown:hover>ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover>ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+
+  .navbar .dropdown .dropdown:hover>ul {
+    left: -100%;
+  }
+}
+
+.nav-link-ltr {
+
+  text-decoration: none;
+
+  display: inline-block;
+  position: relative;
+  opacity: 0.75;
+}
+
+.nav-link-ltr:hover {
+  opacity: 1;
+}
+
+.nav-link-ltr::before {
+  transition: 300ms;
+  height: 3px;
+  content: "";
+  position: absolute;
+  background-color: #031D44;
+}
+
+.nav-link-ltr::before {
+  width: 0%;
+  bottom: 5px;
+}
+
+.nav-link-ltr:hover::before {
+  width: 60%;
+}
+.navbar .active::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    content: " ";
+      
+
+}
+
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-toggle {
+  color: #000000;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+.mobile-nav-toggle.bi-x {
+  color: #010101;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+}
+
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(40, 58, 90, 0.9);
+  transition: 0.3s;
+  z-index: 999;
+ 
+}
+
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  border-radius: 10px;
+  background-color: #fff;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+
+.navbar-mobile a,
+.navbar-mobile a:focus {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #37517e;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover>a {
+  color: #47b2e4;
+}
+
+.navbar-mobile .getstarted,
+.navbar-mobile .getstarted:focus {
+  margin: 15px;
+  color: #37517e;
+}
+
+.navbar-mobile .dropdown ul {
+  position: static;
+  display: none;
+  margin: 10px 20px;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 1;
+  visibility: visible;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+
+.navbar-mobile .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar-mobile .dropdown ul a {
+  padding: 10px 20px;
+}
+
+.navbar-mobile .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar-mobile .dropdown ul a:hover,
+.navbar-mobile .dropdown ul .active:hover,
+.navbar-mobile .dropdown ul li:hover>a {
+  color: #47b2e4;
+}
+
+.navbar-mobile .dropdown>.dropdown-active {
+  display: block;
+}
+
+
+     </style>
+</head>
+<body>
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top ">
+  <div class="container d-flex align-items-center">
+
+    <h1 class="logo me-auto"><a href="index.html"><img src="picture\Logo_Punchbiz.jpg" ></a></h1>
+  
+    
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a class="nav-link scrollto nav-link-ltr " href="index.html">Home</a></li>
+        <li><a class="nav-link scrollto nav-link-ltr" href="about.html">About</a></li>
+        <li><a class="nav-link scrollto nav-link-ltr active" href="product.html">Product</a></li>
+        <li><a class="nav-link   scrollto nav-link-ltr" href="client.html">Client</a></li>
+       
+        <li><a class="nav-link scrollto nav-link-ltr" href="contact.html">Contact</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+
+  </div>
+</header>
+   <section id="product-icons">
+    <div class="container" style="margin-top: 100px;">
+      
+    <div class="card">
+      
+        <h3 class="card-title text-center icon-heading">
+          <div class="section-title">
+            <h2>Product</h2>
+          </div>
+        </h3>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="circular-image">
+              <a href="#Brains-description"><img src="picture/Brains.jpg" alt="Image 1"></a> 
+              </div>
+              <h1 class="icon-name">Brains</h1>
+            </div>
+          <div class="col-md-3">
+            <div class="circular-image">
+              <a href="#CrickVision-description"><img src="picture/cv.jpg" alt="Image 2"></a>
+            </div>
+            <h1 class="icon-name">CrickVision</h1>
+          </div>
+          <div class="col-md-3">
+            <div class="circular-image">
+              <a href="#Exit-description"><img src="picture/exit.jpg" alt="Image 3" height="95%" width="95%"></a>
+            </div>
+            <h1 class="icon-name">Exit</h1>
+          </div>
+          <div class="col-md-3">
+            <div class="circular-image">
+              <a href="#exploreDshape-description"><img src="picture/ExploreDshape.jpg" alt="Image 4"></a>
+            </div>
+            <h1 class="icon-name">ExploreDShape</h1>
+          </div>
+        </div><span class="line-break"></span>     
+       
+          <div class="row">
+            <div class="col-md-3">
+              <div class="circular-image">
+                <a href="#buybest-description"><img src="https://punchbiz.co/img/buybest.png" alt="Image 1"></a>
+              </div>
+              <h1 class="icon-name">Buy Best</h1>
+            </div>
+            <div class="col-md-3">
+              <div class="circular-image">
+                <a href="#voice-description"><img src="https://punchbiz.co/img/voice.png" alt="Image 2"></a>
+              </div>
+              <h1 class="icon-name">Voice Modal</h1>
+            </div>
+            <div class="col-md-3">
+              <div class="circular-image">
+                <a href="#intruder-description"><img src="https://punchbiz.co/img/intruder.png" alt="Image 3"></a>
+              </div>
+              <h1 class="icon-name">Intruder Watch</h1>
+            </div>
+            <div class="col-md-3">
+              <div class="circular-image">
+                <a href="#autoannotate-description"><img src="picture/autoannotate.jpg" alt="Image 4"></a>
+              </div>
+              <h1 class="icon-name">Auto Annotation</h1>
+            </div>
+          </div><span class="line-break"></span>
+        <br>
+        <h3 class="card-title text-center icon-heading">
+          <div class="section-title">
+            <h2>Software as a Service</h2>
+          </div>
+        </h3><br>
+          <div class="row ">
+            <div class="col-md-3"></div>
+            <div class="col-md-3 ">
+              <div class="circular-image">
+                <a href="#dataannotate-description"><img src="picture/data.jpg" alt="Image 1" ></a>
+              </div>
+              <h1 class="icon-name">Data Annotation Service</h1>
+            </div>
+            <div class="col-md-3 ">
+              <div class="circular-image">
+                 <a href="#Elearning-description"><img src="picture/elearning.jpg" alt="Image 1" ></a>
+              </div>
+              <h1 class="icon-name">E Learning</h1>
+            </div>
+            <div class="col-md-3"></div>
+          </div>
+        </div>
+      
+    </div>
+  </div><span class="line-break"></span>
+</section> 
+
+  <section class="container-fluid img-left box" id="Brains-description">
+    <div class="section-title">
+      <h2>Product Description</h2>
+    </div>
+    <div class="container">
+        <div class="reveal"></div>
+      <div class="bg reveal " id="brains">
+        <h2 class="text-center pt-2 des-heading">BRAINS</h2>
+        <h4 class="text-center sub-heading">AI-Powered Learning for the Next Generation</h4>
+          <div class="row ">
+            <div class="col-lg-6 order-lg-1 ">
+              <img src="picture/Brains.jpg" class="rounded mx-auto d-block pt-5 imag reveal" alt="Image 1" height="300px" width="300px">
+            </div>
+            <div class="col-lg-6 order-lg-2">
+              <p class="text-justify p-5 para reveal">Brains is an innovative educational AI coding platform designed to help students of all ages learn to code in a fun and interactive way. Our platform utilizes artificial intelligence and machine learning algorithms to personalize the learning experience for each individual student. With Brains, students can work through coding challenges and projects at their own pace, receiving real-time feedback and guidance along the way. Our platform covers a wide range of programming languages, from beginner-friendly languages like Scratch to more advanced languages like python. Whether you're a complete beginner or a seasoned coder, Brains has everything you need to take your coding skills to the next level. With its userfriendly interface and engaging learning experience, Brains is the perfect tool for anyone looking to boost their coding knowledge and skills.</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  <!-- <span class="line-break"></span> -->
+
+  <section class="container-fluid img-right box" id="CrickVision-description">
+    <div class="container">
+      <div class="reveal"></div>
+      <div class="bg1 reveal ">    
+        <h2 class="text-center pt-2 des-heading">CRICKVISION</h2>
+        <h4 class="text-center sub-heading">Unleash Your Cricket Potential with CrickVision</h4>
+      <div class="row ">
+        <div class="col-lg-6 order-lg-2">
+          <img src="picture/cricvision.png" class="rounded mx-auto d-block pt-5 imag reveal" alt="Image 2" height="300px" width="300px">
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <p class="text-justify p-5 para reveal">CrickVision is a powerful cricket analytics data product that provides insightful analysis of cricket matches and players. Our state-of-the-art technology uses computer vision and machine learning algorithms to track and analyze player movements, shots, and other crucial on-field actions. With CrickVision, coaches, players, and fans alike can access a wealth of data-driven insights, from performance metrics to opponent analysis. Whether you're looking to improve your own game or analyze the strategies of top teams, CrickVision is the ultimate tool for cricket enthusiasts. With intuitive dashboards and customizable reports, CrickVision delivers the information you need to make informed decisions and stay ahead of the game.</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+  <section class="container-fluid img-left box" id="Exit-description">
+    <div class="container">
+      <div class="reveal"></div>
+      <div class="bg reveal " >
+      <h2 class="text-center pt-2 des-heading">EXIT</h2>
+      <h4 class="text-center sub-heading">Exit :- Start from at least now!</h4>
+      <div class="row ">
+        <div class="col-lg-6 order-lg-1">
+          <img src="picture/Exit.png" class="rounded mx-auto d-block pt-5 imag reveal" alt="Image 1" height="300px" width="300px">
+        </div>
+        <div class="col-lg-6 order-lg-2">
+          <p class="text-justify p-5 para reveal">Exit is the next-generation AI exercise vision analytics app designed to help fitness enthusiasts achieve their full potential. Our app uses advanced computer vision algorithms to analyze and track a user's exercise movements in real-time, providing in-depth insights and performance metrics to help them optimize their workout routine. Exit also offers personalized workout plans, tailored to the individual's fitness goals, and provides regular progress updates to help them stay motivated. Whether you're a seasoned person or just starting your fitness journey, Exit is the ultimate tool for maximizing your results and reaching your full potential. With Exit, you'll be able to track your progress, monitor your form, and push yourself to new heights.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <section class="container-fluid img-right box" id="exploreDshape-description">
+    <div class="container">
+      <div class="reveal"></div>
+      <div class="bg1 reveal" id="explore" >
+        <h2 class="text-center pt-2 des-heading">ExploreDshape</h2>
+        <h4 class="text-center sub-heading">ExploreDShape: The Future of 3D Modeling</h4>
+        <div class="row ">
+          <div class="col-lg-6 order-lg-2">
+            <img src="picture/ExploreDshape.png" class="rounded mx-auto d-block pt-5 imag reveal" alt="Image 2" height="300px" width="300px">
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <p class="text-justify p-5 para reveal">ExploreDShape is a cutting-edge AI 3D reconstruction app designed for architects, engineers, and designers. Our app leverages advanced computer vision algorithms to create highly accurate 3D models from 2D images, making it easier and more efficient to visualize and analyze designs. ExploreDShape also offers real-time visualization and collaboration features, allowing multiple users to work on the same project simultaneously. With its user-friendly interface and intuitive tools, ExploreDShape is the ultimate tool for bringing your designs to life. Whether you're a professional designer or just starting out, ExploreDShape makes it easier than ever to turn your ideas into reality. With ExploreDShape, you'll be able to bring your designs to life, analyze and refine your models, and collaborate with your team like never before.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container-fluid img-left box" id="buybest-description">
+    <div class="container">
+      <div class="reveal"> </div>
+        <div class="bg reveal" id="buybest">
+          <h2 class="text-center pt-2 des-heading">Best Buy</h2>
+          <h4 class="text-center sub-heading">Shop smarter, faster, and easier with our AI-powered shopping cart</h4>
+          <div class="row ">
+            <div class="col-lg-6 order-lg-1 ">
+              <img src="picture/buybest.png" class="rounded mx-auto d-block pt-5 imag reveal" alt="Image 1" height="300px" width="300px">
+            </div>
+            <div class="col-lg-6 order-lg-2">
+              <p class="text-justify p-5 para reveal">EBuy Best is the ultimate AI e-commerce delivery app that takes the hassle out of online shopping. Our app uses advanced machine learning algorithms to provide personalized recommendations based on your shopping history and preferences. With Buy Best, you can browse a wide range of products, compare prices, and make purchases with ease. Our app also offers real-time delivery tracking, so you always know where your package is. Whether you're shopping for electronics, fashion, or home goods, Buy Best has got you covered. With our user-friendly interface and intuitive tools, you'll be able to shop smarter and faster than ever before. Download Buy Best today and take the first step towards stress-free online shopping.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+  <section class="container-fluid img-right box" id="voice-description">
+    <div class="container">
+      <div class="reveal"></div>
+      <div class="bg1 reveal" id="voice">    
+        <h2 class="text-center pt-2 des-heading">Voice Modal</h2>
+        <h4 class="text-center sub-heading">Order food with just your voice - the future of convenient delivery is here!</h4>
+      <div class="row ">
+        <div class="col-lg-6 order-lg-2 ">
+          <img src="picture/voice.png" class="rounded mx-auto d-block pt-5 imag reveal" alt="Image 2" height="300px" width="300px">
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <p class="text-justify p-5 para reveal">Model is the ultimate AI voice recognition food delivery app that revolutionizes the way you order food. With our app, you can use your voice to place an order, customize your meal, and even track your delivery in real-time. Our advanced machine learning algorithms enable Voice Model to understand natural language and accents, providing a seamless user experience. The app also features an easy-to-use interface, making it perfect for anyone, including those with disabilities. Voice Model is integrated with a range of restaurants, ensuring that you have access to a wide variety of cuisines. With our app, you'll never have to worry about getting your order wrong or miscommunication again. Order your next meal with Voice Model and experience the future of food delivery.</p>
+          
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+  <section class="container-fluid img-left box" id="intruder-description">
+    <div class="container">
+      <div class="reveal"></div>
+      <div class="bg reveal" id="intruder">
+        <h2 class="text-center pt-2 des-heading">Intruder Watch</h2>
+        <h4 class="text-center sub-heading">Secure you surrounding with Intruder survelliance</h4>
+      <div class="row ">
+      <div class="col-lg-6 order-lg-1 ">
+        <img src="picture/intruder.png" class="rounded mx-auto d-block pt-5 imag reveal" alt="Image 1" height="300px" width="300px">
+      </div>
+      <div class="col-lg-6 order-lg-2">
+        <p class="text-justify p-5 para reveal">Intruder Watch is the ultimate AI security app designed to keep your property safe and secure. Our app leverages advanced machine learning algorithms to detect and identify potential intruders in real-time. With Intruder Watch, you'll receive instant alerts when someone enters your property, allowing you to take immediate action. Our app is also equipped with a range of features, including live video streaming, motion detection, and facial recognition, making it easy to monitor your property from anywhere. Whether you're at home or on the go, Intruder Watch gives you peace of mind knowing that your property is protected. Stay one step ahead of potential threats with Intruder Watch.</p>
+      </div>
+      </div>
+      </div>
+    </div>
+  </section>
+  <section class="container-fluid img-right box" id="autoannotate-description">
+    <div class="container">
+      <div class="reveal"></div>
+      <div class="bg1 reveal">
+        <h2 class="text-center pt-2 des-heading">Auto Annotation</h2>
+        <h4 class="text-center sub-heading">AI-Powered Tool for Auto Annotation of Data</h4>
+        <div class="row ">
+        <div class="col-lg-6 order-lg-2">
+          <img src="picture/autoannotation.png" class="rounded mx-auto d-block pt-5 imag reveal" alt="Image 2" height="300px" width="300px">
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <p class="text-justify p-5 para reveal"> Image Auto Annotation Model is a state-of-the-art AI solution that streamlines the process of annotating images. Our model leverages advanced machine learning algorithms to automatically identify and label objects within images, making it faster and more efficient to classify and analyze large datasets. The Image Auto Annotation Model is highly accurate and can be customized to suit your specific needs, whether you're working with medical images, satellite imagery, or product photos. With our model, you'll be able to significantly reduce the time and effort required for image annotation, allowing you to focus on other critical tasks. Improve your image analysis workflow today with the Image Auto Annotation Model.</p>
+        </div>
+        </div>
+        </div>
+    </div>
+  </section>
+  <section class="container-fluid img-left box" id="dataannotate-description">
+    <div class="container">
+      <div class="reveal"></div>
+      <div class="bg reveal" id="dataann">
+        <h2 class="text-center pt-2 des-heading">Data Annotation Service</h2>
+        <h4 class="text-center sub-heading">AI-Powered methodologies for Data Annotation</h4>
+    <div class="row ">
+      <div class="col-lg-6 order-lg-1">
+        <img src="picture/dataanno.png" class="rounded mx-auto d-block pt-5 imag reveal" alt="Image 1" height="300px" width="300px">
+      </div>
+      <div class="col-lg-6 order-lg-2 reveal text-justify pr-5">
+        <p >The types of data annotations in machine learning, we offer:
+          <ul><li>Image Annotation: This involves labeling objects, features, and regions in images, such as bounding boxes, semantic segmentation, and object detection.</li>
+          <li>Annotation: This involves labeling text data with relevant categories, such as sentiment analysis, entity recognition, and part-of-speech tagging.</li>
+          <li>Audio Annotation: This involves labeling audio data, such as speech recognition, transcription, and speaker identification.</li>
+          <li>Video Annotation: This involves labeling objects, features, and regions in videos, such as action recognition, object tracking, and scene detection.</li></ul></p>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+  <section class="container-fluid img-right box" id="Elearning-description">
+    <div class="container">
+      <div class="bg1 reveal" id="elearn">
+        <h2 class="text-center pt-2 des-heading">E-Learning</h2>
+        <h4 class="text-center sub-heading">Elearning is not the next big thing, it is the now big thing</h4>
+        
+        <div class="row ">
+        <div class="col-lg-6 order-lg-2">
+          <img src="picture/elearn.png" class="rounded mx-auto d-block pt-5 imag reveal" alt="Image 2" height="300px" width="300px">
+        </div>
+        <div class="col-lg-6 order-lg-1 reveal">
+          <p class="text-justify p-4 "><ul><li>Masterclass with Python</li>
+            <li>Data Annotation Curriculum:</li><ul><li>Course Introduction Introduction - Data Annotation - ML - Deep Learning;</li><li>Introduction - Data Annotation types (i)2D & 3D Bounding box Annotation, (ii)Polygon Annotation, (iii)Point & Polyline Annotation, (iv)Semantic & Instance Segmentation, (v)3D LiDAR Annotation. (vi)Audio Annotation</li><li>Annotation Tool Demo -LabelIMg, LabelMe, Dataloop,Label Studio</li><li>Re-Collect - Week sessions</li></ul>
+          </ul></p>
+        </div>
+        </div>
+        </div>
+    </div>
+    <section id="ecourse" class="container mt-5">
+      <div class="row">
+        <div class="col-xl-3 col-sm-6 col-12"> 
+          <div class="card ecourse-card">
+          <div class="card-content">
+            <div class="card-body">
+              <div class="media d-flex">
+                <div class="align-self-center">
+                  <i class="fab fa-python  float-left ml-2" style="font-size: 45px; color: blue;"></i>
+                </div>
+                <div class="media-body ml-5">
+                  <h5>Masterclass with Python</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> </div>
+        <div class="col-xl-3 col-sm-6 col-12">
+          <div class="card ecourse-card">
+            <div class="card-content">
+              <div class="card-body">
+                <div class="media d-flex">
+                  <div class="align-self-center">
+                    <i class="fab fa-python  float-left ml-2" style="font-size: 45px; color: blue;"></i>
+                  </div>
+                  <div class="media-body ml-5">
+                    <h5>Masterclass with AI</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-12">
+          <div class="card ecourse-card">
+            <div class="card-content">
+              <div class="card-body">
+                <div class="media d-flex">
+                  <div class="align-self-center">
+                    <i class="fab fa-python  float-left ml-2" style="font-size: 45px; color: blue;"></i>
+                  </div>
+                  <div class="media-body ml-5">
+                    <h5>Masterclass with JS</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-12">
+          <div class="card ecourse-card">
+            <div class="card-content">
+              <div class="card-body">
+                <div class="media d-flex">
+                  <div class="align-self-center">
+                    <i class="fab fa-python  float-left ml-2" style="font-size: 45px; color: blue;"></i>
+                  </div>
+                  <div class="media-body ml-5">
+                    <h5>Masterclass with Python</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <footer class="footer">
+    <div class="waves" style="margin: 10px 0;">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <div class="add1"><i class='fa fa-map-marker-alt'></i>&nbsp;&nbsp;<h3>Registered Office</h3></div>
+          <div class="add1">89/2/36, Vasagasalai Street, </div>
+          <div class="add1">Ponnamapet,</div>
+          <div class="add1">Salem, Tamil Nadu, India - 636001</div>
+        </div>
+        
+        <div class="col-sm">
+          <div class="add1"><i class='fa fa-map-marker-alt'></i>&nbsp;&nbsp;<h3>Branch Office</h3></div>
+            <div class="add1">Room 2,3 rd floor, </div>
+            <div class="add1">Plot No 8 MS Complex Sastri</div>
+            <div class="add1">Nagar Kolathur,Chennai-600099</div>
+        </div>
+      </div>
+    </div>
+    
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+    <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="about.html">About</a></li>
+      <li class="menu__item"><a class="menu__link" href="product.html">Product</a></li>
+      <li class="menu__item"><a class="menu__link" href="client.html">Client</a></li>
+      <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
+  
+    </ul>
+    <p>&copy;2023 Punchbiz | All Rights Reserved</p>
+  </footer>
+  
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
